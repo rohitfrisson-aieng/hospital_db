@@ -216,6 +216,11 @@ def get_doctors_by_speciality(speciality: str):
 
 # ------------------ API Routes ------------------ #
 
+
+@app.get("/")
+def welcome_message():
+    return "WELCOME TO HOSPITAL SERVER"
+
 @app.get("/specialities")
 def api_get_specialities():
     return get_specialities_from_doctor_table()
