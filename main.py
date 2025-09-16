@@ -3,16 +3,25 @@ from typing import Optional
 from pydantic import BaseModel
 import psycopg2
 import uvicorn
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+host = os.getenv("host")
+database = os.getenv("database")
+user = os.getenv("user")
+password = os.getenv("password")
+port = os.getenv("port")
 # ------------------ FastAPI INIT ------------------ #
 app = FastAPI(title="Hospital Management API", version="1.0.0")
 
 DB_CONFIG = {
-    "host": "aws-1-ap-south-1.pooler.supabase.com",
-    "database": "postgres",
-    "user": "postgres.vxpbprbchmpsoaxorocz",
-    "password": "hospital_123##H",
-    "port": "6543"
+    "host": "host",
+    "database": "database",
+    "user": "user",
+    "password": "password",
+    "port": "port"
 }
 
 
