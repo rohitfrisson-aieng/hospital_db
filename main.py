@@ -17,11 +17,11 @@ port = os.getenv("port")
 app = FastAPI(title="Hospital Management API", version="1.0.0")
 
 DB_CONFIG = {
-    "host": "host",
-    "database": "database",
-    "user": "user",
-    "password": "password",
-    "port": "port"
+    "host": host,
+    "database": database,
+    "user": user,
+    "password": password,
+    "port": port
 }
 
 
