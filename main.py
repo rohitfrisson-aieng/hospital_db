@@ -265,7 +265,7 @@ def api_book_appointment(req: AppointmentRequest):
 
 if __name__ =="__main__":
     uvicorn.run(
-        host = "localhost",
+        host = "0.0.0.0",
         app = app,
         port = 8000
     )
